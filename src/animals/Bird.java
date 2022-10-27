@@ -1,17 +1,14 @@
 package animals;
 
-public class Mammal extends Animal {
+public class Bird extends Animal{
     private String habitat;
-    private double speed;
 
-    public Mammal(String name, int years, String habitat, double speed) {
+    public Bird(String name, int years, String habitat) {
         super(name, years);
         this.habitat = check(habitat);
-        this.speed = Math.abs(speed);
     }
-
-    public void walk() {
-        System.out.println("Oно гуляет.");
+    public void hunt(){
+        System.out.println("Оно охотится.");
     }
 
     public String getHabitat() {
@@ -19,15 +16,7 @@ public class Mammal extends Animal {
     }
 
     public void setHabitat(String habitat) {
-        this.habitat = check(habitat);
-    }
-
-    public double getSpeed() {
-        return speed;
-    }
-
-    public void setSpeed(double speed) {
-        this.speed = Math.abs(speed);
+        this.habitat = habitat;
     }
 
     @Override
